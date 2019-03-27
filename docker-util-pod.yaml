@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: driosalido-utils
+spec:
+  containers:
+  - image: driosalido/docker-util:1
+    imagePullPolicy: IfNotPresent
+    name: driosalido-utils
+    securityContext:
+      privileged: true
+  restartPolicy: OnFailure
